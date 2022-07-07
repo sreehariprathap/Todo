@@ -1,1 +1,64 @@
 <app-nav></app-nav>
+<div class="p-5 flex justify-center">
+  <div cdkDropListGroup class="flex">
+    <div class="example-container">
+      <h2
+        class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+      >
+        Todo
+      </h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list bg-slate-700 flex flex-col gap-1 p-1"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box bg-slate-800 text-white"
+          *ngFor="let item of todo"
+          cdkDrag
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2 class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-violet-600">In Progress</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="inProgress"
+        class="example-list bg-slate-700 flex flex-col gap-1 p-1"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box bg-slate-800 text-white"
+          *ngFor="let item of inProgress"
+          cdkDrag
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2 class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Done</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list bg-slate-700 flex flex-col gap-1 p-1 shadow-lg"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box bg-slate-800 text-white"
+          *ngFor="let item of done"
+          cdkDrag
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

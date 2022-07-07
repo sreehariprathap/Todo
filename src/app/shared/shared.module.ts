@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 import { NavComponent } from '../core/components/nav/nav.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { ReactiveFormsModule } from '@angular/forms';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     NavComponent,
     HotToastModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule,
   ]
 })
 export class SharedModule { }
