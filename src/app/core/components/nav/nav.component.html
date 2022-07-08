@@ -1,35 +1,44 @@
 <aside
-  class="fixed top-0 left-0 h-screen w-20 flex flex-col bg-white gap-6 dark:bg-gray-900 shadow-lg"
+  class="fixed top-0 left-0 h-screen w-16 flex flex-col bg-white dark:bg-base-300 shadow-lg gap-1"
 >
   <div class="flex flex-col justify-center items-center">
-    <div
-      class="w-16 h-16 bg-gray-800 flex justify-center items-center m-2 rounded-full hover:rounded-md duration-200 hover:ease-in-out group"
-    >
-      <fa-icon [icon]="faPenNib" class="text-violet-600 fa-2xl"></fa-icon>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faFeather" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Home </span>
     </div>
-    <p>Todo</p>
   </div>
-  <div class="px-2">
-    <div class="bg-gray-500 h-0.5 w-full opacity-50"></div>
-  </div>
+  <hr class="sidebar-hr" />
+
   <div>
-    <div
-      class="w-16 h-16 bg-gray-800 flex justify-center items-center m-2 rounded-full hover:rounded-md duration-200 hover:ease-in-out group"
-    >
-      <fa-icon [icon]="faCalendar" class="text-violet-600 fa-2xl"></fa-icon>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faPlus" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Add Todo </span>
     </div>
-    <div
-      class="w-16 h-16 bg-gray-800 flex justify-center items-center m-2 rounded-full hover:rounded-md duration-200 hover:ease-in-out group"
-    >
-      <fa-icon [icon]="faListCheck" class="text-violet-600 fa-2xl"></fa-icon>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faCalendar" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Calander </span>
     </div>
-    <div
-      class="w-16 h-16 bg-gray-800 flex justify-center items-center m-2 rounded-full hover:rounded-md duration-200 hover:ease-in-out group"
-    >
-      <fa-icon
-        [icon]="faArrowRightFromBracket"
-        class="text-violet-600 fa-2xl"
-      ></fa-icon>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faListCheck" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Tasks </span>
+    </div>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faGear" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Settings </span>
+    </div>
+  </div>
+  <hr class="sidebar-hr" />
+  <div class="h-full flex flex-col justify-end py-5">
+    <div class="sidebar-user group">
+      <img
+        src="https://www.themoviedb.org/t/p/w500/m0B3xp2CznjQgL0Gvu0YXIdcGIV.jpg"
+        alt=""
+        class="sidebar-img"
+      />
+    </div>
+    <div class="sidebar-icon group">
+      <fa-icon [icon]="faArrowRightFromBracket" class="fa-xl"></fa-icon>
+      <span class="sidebar-tooltip group-hover:scale-100"> Logout </span>
     </div>
   </div>
 </aside>

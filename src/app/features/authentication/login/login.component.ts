@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
       .then(() => {
         this.authService.isLoggedin = true;
         this.toast.success('User logged in successfully');
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/dash']);
+        localStorage.setItem('isLoggedin', 'true');
       })
       .catch((error) => {
         this.toast.error(error.message);

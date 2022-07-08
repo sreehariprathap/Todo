@@ -10,6 +10,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavComponent } from './core/components/nav/nav.component';
+import { HeaderComponent } from './core/components/header/header.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HotToastModule.forRoot(),
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NavComponent,
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

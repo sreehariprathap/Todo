@@ -1,0 +1,39 @@
+<label for="my-modal-6" class="btn modal-button">+ ADD TODO</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Add Todo</h3>
+    <div>
+      <form [formGroup]="addTodoForm">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Title</span>
+          </label>
+          <input
+            id="title"
+            type="text"
+            placeholder="Add Title"
+            class="input input-bordered form-control"
+            formControlName="title"
+          />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Description</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered h-24"
+            placeholder="Enter Description"
+            formControlName="description"
+          ></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn" (click)="addTodo()">Add</label>
+      <label for="my-modal-6" class="btn">Cancel</label>
+    </div>
+  </div>
+</div>

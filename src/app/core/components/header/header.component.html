@@ -1,0 +1,32 @@
+<div class="fixed top-0 h-32 w-full flex items-center justify-around bg-base-100">
+  <div class="flex flex-col justify-between items-stretch gap-3">
+    <div class="text-3xl">
+      <h2>My Tasks</h2>
+    </div>
+    <div class="flex h-full items-end">
+      <ul class="flex gap-7">
+        <li class="header-item">Todo</li>
+        <li class="header-item">List</li>
+        <li class="header-item">Board</li>
+        <li class="header-item">Calander</li>
+      </ul>
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  <div class="flex items-center gap-5">
+    <div class="form-control">
+      <input
+        type="text"
+        placeholder="Search"
+        class="input input-bordered rounded-full"
+      />
+    </div>
+    <div>
+      <fa-icon
+        [icon]="faBell"
+        class="fa-xl hover:text-blue-400 transition-all duration-150 cursor-pointer"
+      ></fa-icon>
+    </div>
+  </div>
+</div>

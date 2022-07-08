@@ -1,0 +1,6 @@
+@tailwind components;
+@layer components {
+  .header-item {
+    @apply border-b-2 border-opacity-10 border-blue-500 hover:border-opacity-100 cursor-pointer transition duration-200;
+  }
+}

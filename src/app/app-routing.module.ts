@@ -10,11 +10,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'dashboard',
+    path: 'dash',
     loadChildren: () =>
-      import('./features/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
+      import('./features/dash/dash.module').then((m) => m.DashModule),
   },
 ];
 
