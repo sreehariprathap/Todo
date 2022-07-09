@@ -1,1 +1,63 @@
-<p>list works!</p>
+<div class="mt-32 ml-32 mr-10 flex flex-col gap-8">
+  <div>
+    <section
+      class="flex justify-between border-b border-blue-500 border-opacity-20 py-2"
+    >
+      <div class="w-6/12">Task Name</div>
+      <div class="w-3/12 text-center">Due Date</div>
+      <div class="w-2/12 text-center">Status</div>
+      <div class="w-1/12"></div>
+    </section>
+    <section class="my-2">
+      <h2 class="text-xl font-medium">New Tasks 🆕</h2>
+      <ul class="flex flex-col gap-1 py-2">
+        <div
+          *ngFor="let item of todos | async"
+          class="flex justify-between p-2 border-[0.5px] rounded-xl items-center border-slate-600 hover:shadow-lg hover:scale-y-105 cursor-pointer transition-all duration-200"
+        >
+          <h2 class="w-6/12">{{ item.title }}</h2>
+          <h2 class="w-3/12 text-center">2021-02-02</h2>
+          <h2 class="w-2/12 text-center">{{ item.status }}</h2>
+          <div class="w-1/12">
+            <fa-icon
+              [icon]="faCircleCheck"
+              class="fa-xl text-slate-200 hover:text-green-300 transition-all duration-200 cursor-pointer"
+            ></fa-icon>
+          </div>
+        </div>
+      </ul>
+      <app-add-todo></app-add-todo>
+    </section>
+  </div>
+  <!-- section2  -->
+  <div>
+    <section
+      class="flex justify-between border-b border-blue-500 border-opacity-20 py-2"
+    >
+      <div class="w-6/12">Task Name</div>
+      <div class="w-3/12 text-center">Due Date</div>
+      <div class="w-2/12 text-center">Status</div>
+      <div class="w-1/12"></div>
+    </section>
+    <section class="my-2">
+      <h2 class="text-xl font-medium">New Tasks 🆕</h2>
+      <ul class="flex flex-col gap-1 py-2">
+        <div
+          *ngFor="let item of todos | async"
+          class="flex justify-between p-2 border-[0.5px] rounded-xl items-center border-slate-600 hover:shadow-lg hover:scale-y-105 cursor-pointer transition-all duration-200"
+        >
+          <h2 class="w-6/12">{{ item.title }}</h2>
+          <h2 class="w-3/12 text-center">2021-02-02</h2>
+          <h2 class="w-2/12 text-center">{{ item.status }}</h2>
+          <div class="w-1/12">
+            <fa-icon
+              [icon]="faCircleCheck"
+              class="fa-xl text-slate-200 hover:text-green-300 transition-all duration-200 cursor-pointer"
+            ></fa-icon>
+          </div>
+        </div>
+      </ul>
+      <app-add-todo></app-add-todo>
+    </section>
+  </div>
+</div>

@@ -35,10 +35,11 @@ export class LoginComponent implements OnInit {
         this.loginForm.value.password
       )
       .then(() => {
-        this.authService.isLoggedin = true;
+        this.authService.isLoggedIn = true;
         this.toast.success('User logged in successfully');
         this.router.navigate(['/dash']);
         localStorage.setItem('isLoggedin', 'true');
+        this.authService.isLoggedIn = true;
       })
       .catch((error) => {
         this.toast.error(error.message);

@@ -8,7 +8,7 @@
     </div>
   </div>
   <div>
-    <div class="flex gap-5 felx-wrap">
+    <div class="flex gap-5 flex-wrap">
       <div
         class="card w-96 bg-base-100 shadow-xl"
         *ngFor="let item of todos | async"
@@ -20,7 +20,7 @@
               value="100"
               max="100"
             ></progress>
-            <button class="btn bg-base-100">
+            <button class="btn bg-base-100 border-0">
               <fa-icon
                 [icon]="faEllipsis"
                 class="fa-xl text-green-300"
@@ -37,7 +37,7 @@
           </div>
           <p>{{ item.description }}</p>
           <div class="card-actions justify-between items-center">
-            <h1 class="font-bold">{{ item.createdDate | date}}</h1>
+            <h1 class="font-bold">{{ item.createdDate | date }}</h1>
             <button class="btn btn-success">Mark As Complete</button>
           </div>
         </div>

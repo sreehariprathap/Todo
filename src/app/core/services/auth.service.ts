@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedin = false;
+  isLoggedIn:any = false;
 
   constructor(private auth: Auth) {}
 
